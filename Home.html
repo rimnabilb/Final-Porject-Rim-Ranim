@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+ <link rel="stylesheet" href="home/home.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
+</head>
+<body>
+ <header>
+ <button id="ToggleMode">
+ <img id=ModeIcon src="images/dark-mode.png" alt="Toggle Dark Mode">
+ </button>
+ <img src="images/logo.png" alt="Ghosty Grabs Logo" id="logo">
+ <nav>
+ <a href="#">Home</a> |
+ <a href="about/about.html">About</a> |
+ <a href="products/products.html">Products</a> |
+ <a href="contact/contact.html">Contact</a>
+ </nav>
+ </header>
+<section>
+  <h2>For the spookiest halloween decorations!</h2>
+  <p>Bringing the Halloween spirit to life with hauntingly good deals</p>
+  <table>
+  <tr>
+    <td>
+      <img src="images/Jackolantern.png" alt="Jack o lantern"><br>
+      <p>FESTIVE</p>
+    </td>
+    <td>
+      <img src="images/Ghosty.png" alt="Ghosty"><br>
+      <p>AMBIENT</p>
+    </td>
+    <td>
+      <img src="images/skeletonarms.png" alt="skeleton arms"><br>
+      <p>SPOOKY</p>
+    </td>
+  </tr>
+</table>
+  </section>
+  <footer>
+  <p>©2025 Ghosty Grabs | All Rights Reserved</p>
+
+   <script>
+    const btn = document.getElementById('ToggleMode');
+    const body = document.body;
+    const logo = document.getElementById('logo');
+
+    btn.onclick = () => {
+      body.classList.toggle('dark');
+      logo.src = body.classList.contains('dark') 
+                 ? 'images/logo-dark.png'
+                 : 'images/logo.png';     
+    };
+  </script>
+ </body>
