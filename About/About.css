@@ -1,0 +1,87 @@
+#about {
+  padding: 40px 20px;
+  background-color: #231336;
+  color: #dd6336;
+  text-align: left;
+  font-size: 30px;
+}
+
+#aboutone {
+padding: 40px 20px;
+  background-color: #ffffff;
+  color: #dd6336;
+  text-align: left;
+  background-color: #231336;
+  font-size: 30px;
+}
+#aboutp {
+padding: 40px 20px;
+  background-color: #ffffff;
+  color: #dd6336;
+  text-align: left;
+  background-color: #231336;
+}
+#aboutlist {
+padding: 20px 20px;
+  background-color: #ffffff;
+  color: #dd6336;
+  text-align: left;
+  background-color: #231336;
+  font-size: 30px;
+}
+#about h1 {
+  padding: 40px 20px;
+  font-size: 50px;
+  font-style: serif;
+  margin-bottom: 15px;
+  color: #dd6336;
+ padding: 40px 20px;
+ background-color: #1d102e;
+}
+
+#about h2 {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #dd6336;
+ background-color: #1d102e;
+}
+
+#about ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color:#dd6336;
+}
+
+#about img {
+  display: block;
+  margin: 100px auto;
+  max-width: 100%;
+  border-radius: 50px;
+  border-color:chartreuse
+}
+
+
+#imgabt{
+  width: 100%;
+  height: 500px;
+}
+
+body {
+  font-family: Equistrian Modern, serif;
+  margin: 24px;
+  background-color: #231336;
+  color: #dd6336;
+}
+
+  #banner{
+  width: 100%;
+/*   height: 420px; */
+}
+footer {
+  background-color:#601f4e;
+  color: #dd6336;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="products.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
+</head>
+<body>
+  <header>
+  <h1>Available Prdoucts</h1>
+  <button id="ToggleMode">
+  <img id=ModeIcon src="../images/dark-mode.png" alt="Toggle Dark Mode">
+  </button>
+  </header>
+  <section>
+  <table>
+  <tr>
+    <td>
+      <img src="../images/candybasket.png" alt="Pumpkin Candy Basket">
+      <br>Poisoned Candy Basket<br>$10
+    </td>
+    <td>
+      <img src="../images/jackolantern.png" alt="Jack O Lantern">
+      <br>Jack O'lantern<br>$12
+    </td>
+    <td>
+      <img src="../images/ghosty.png" alt="Ghost Fairy lights">
+      <br>Hanging Ghost Lights<br>$15
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../images/witch1.png" alt="Witch Decoration">
+      <br>Witch Decoration<br>$8
+    </td>
+    <td>
+      <img src="../images/skeletonarms.png" alt="Skeleton Arms">
+      <br>Skeleton Arms<br>$20
+    </td>
+    <td>
+      <img src="../images/witch2.png" alt="Witch Statue">
+      <br>Witch statue<br>$18
+    </td>
+  </tr>
+ </table>
+ <footer>
+  <p>©2025 Ghosty Grabs | All Rights Reserved</p>
+  </footer>
+</section>
+
+<script>
+    const btn = document.getElementById('ToggleMode');
+    const body = document.body;
+    const logo = document.getElementById('logo');
+
+    btn.onclick = () => {
+      body.classList.toggle('dark');
+      logo.src = body.classList.contains('dark') 
+                 ? 'images/logo-dark.png'
+                 : 'images/logo.png';     
+    };
+  </script>
+</body>

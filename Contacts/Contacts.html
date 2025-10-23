@@ -1,0 +1,80 @@
+<head>
+  <link rel="stylesheet" href="Contacts.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
+</head>
+<section id="contact">
+  <h1>Contact Us</h1>
+  <p>Would you Like to Get in Contact with Us? Fill out the form below!</p>
+
+  <form id="contactForm">
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" placeholder="Your Name"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" placeholder="Your Email"></td>
+      </tr>
+      <tr>
+        <td><label for="message">Message:</label></td>
+        <td><textarea id="message" name="message" placeholder="Your Message"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button type="submit">Send Message</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: "AIzaSyC2Yu9gsCzgLRw8uWzCKR7Ykhf0zOVc5j8",
+  authDomain: "final-project-34269.firebaseapp.com",
+  projectId: "final-project-34269",
+  storageBucket: "final-project-34269.firebasestorage.app",
+  messagingSenderId: "191895125625",
+  appId: "1:191895125625:web:b70472c9c7e1cdd313dea8",
+  measurementId: "G-3ME3MN7719"
+};
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+// Handle form submission
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault(); // Prevent page reload
+
+  // Get form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    // Save data to Firestore
+    await addDoc(collection(db, "Contacts"), {
+      name,
+      email,
+      message,
+      timestamp: new Date()
+    });
+    alert("Message sent successfully!");
+    e.target.reset();
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    alert("Error sending message. Check console for details.");
+  }
+});
+</script>
+<footer>
+  <p>© 2025 Ghosty Grabs | All Rights Reserved</p>
+</footer>

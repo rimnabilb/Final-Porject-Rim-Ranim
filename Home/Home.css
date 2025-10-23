@@ -1,0 +1,108 @@
+header {
+	position:relative;
+	background-color:#601f4e;
+	color:#dd6336;
+	font-size:280%;
+	padding:30px;
+	text-align:center;
+	font-family:creepster;
+}
+
+nav a{
+	color:#dd6336;
+	text-decoration:none;
+}
+
+#logo {
+	display: block;
+	margin:0 auto;
+	width:230px;
+	text-align:center;
+}
+body{
+	background-color:#231336;
+}
+
+h2{
+	color:#ec8622;
+	font-size:220%;
+	font-family:cursive;
+	text-align:center;
+}
+
+p{
+	color:#ec8622;
+	font-size:160%;
+	font-family:cursive;
+	text-align:center;
+}
+
+table{
+	width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td {
+  text-align: center;
+  width: 33.3%;
+}
+
+table img {
+  width: 50%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  color:#ec8622;
+  font-size:90%;
+  padding:1%;
+  margin:0;
+}
+
+
+  /*dark mode*/
+
+  #ToggleMode {
+  background: none;
+  border:none;
+  cursor:pointer;
+  }
+
+  #ToggleMode img{
+  position:absolute;
+  top:20px;
+  right:20px;
+  display:block;
+  width:60px;
+  justify-self:right;
+  }
+  #ToggleMode:hover img {
+  filter: brightness(70%);
+}
+
+body.dark {
+    background-color: #141414;
+    color: #83fc68;
+}
+
+body.dark header {
+    background-color: #000000;
+    color: #83fc68;
+}
+
+body.dark footer {
+    color: #4ffc28;
+}
+
+body.dark nav a {
+    color: #83fc68;
+}
+
+body.dark h2 {
+	color: #4ffc28;
+}
+
+body.dark p {
+	color: #4ffc28;
+}
