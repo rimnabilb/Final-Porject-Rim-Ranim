@@ -16,7 +16,7 @@
 /* Form Table */
 #contact table {
   margin: 0 auto;
-  width: 70%;
+  width: 800px;
   border-collapse: separate;
   border-spacing: 10px 15px;
 }
@@ -63,7 +63,7 @@ footer {
 }
 
 body{
-    zoom:1.2;
+    zoom:1.7;
     background-color:#ec8622;
 
 
