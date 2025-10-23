@@ -3,6 +3,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
 </head>
 <section id="about">
+<button id="ToggleMode">
+ <img id=ModeIcon src="../images/dark-mode.png" alt="Toggle Dark Mode">
+ </button>
   <h1>Ghosty Grabs</h1>
   <p>Your Dream Location for all Things Halloween from Decorations to Unique Experiences</p>
   <img id="imgabt" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t2eSbvLCmMonowsSTyhzP8Ud5IjXXHMhcIlU0cReaEGCU44Fdkj1rJG5rnrP6EOHKdwMMV94aJtzyR58n37mzyKBQZ8yG22YWWOWjFeoK5zJa8-GiEcU30nLfBUuAeFY2Og7rlYvPUHOvKTOe8aist80VK00CYW4ycr0_2SBQ=w919-h516-p-k-no-nu"
@@ -25,3 +28,16 @@
 <footer>
   <p>© 2025 Ghosty Grabs | All Rights Reserved</p>
 </footer>
+
+<script>
+    const btn = document.getElementById('ToggleMode');
+    const body = document.body;
+    const logo = document.getElementById('logo');
+
+    btn.onclick = () => {
+      body.classList.toggle('dark');
+      logo.src = body.classList.contains('dark') 
+                 ? 'images/logo-dark.png'
+                 : 'images/logo.png';     
+    };
+  </script>
