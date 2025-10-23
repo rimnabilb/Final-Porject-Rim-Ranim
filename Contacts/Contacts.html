@@ -3,6 +3,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
 </head>
 <section id="contact">
+<button id="ToggleMode">
+ <img id=ModeIcon src="../images/dark-mode.png" alt="Toggle Dark Mode">
+ </button>
   <h1>Contact Us</h1>
   <p>Would you Like to Get in Contact with Us? Fill out the form below!</p>
 
@@ -22,7 +25,7 @@
       </tr>
       <tr>
         <td colspan="2" style="text-align:center;">
-          <button type="submit">Send Message</button>
+          <button id="btn2" type="submit">Send Message</button>
         </td>
       </tr>
     </table>
@@ -75,6 +78,20 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   }
 });
 </script>
+
+<script>
+    const btn = document.getElementById('ToggleMode');
+    const body = document.body;
+    const logo = document.getElementById('logo');
+
+    btn.onclick = () => {
+      body.classList.toggle('dark');
+      logo.src = body.classList.contains('dark') 
+                 ? 'images/logo-dark.png'
+                 : 'images/logo.png';     
+    };
+  </script>
+
 <footer>
   <p>© 2025 Ghosty Grabs | All Rights Reserved</p>
 </footer>
